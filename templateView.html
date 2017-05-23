@@ -1,0 +1,30 @@
+    <!DOCTYPE html>
+    <html ng-app="mathematicEvaluator">
+        <head>
+            <title>Angular Math Expression Evaluator</title>
+            <!--  link to the angularjs min file from google CDN-->
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+            <!-- Link to the js file that contains the directive-->
+            <script src="evaluateMathExp.js" /> </script>
+            <!-- Link to bootstrap for basic CSS    -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+            <script type="text/javascript">
+                // Add the math directive dependency in your module
+                var pageApp = angular.module('mathematicEvaluator', ['evaluate-math-expression']) ;
+            </script>
+
+            <div class="well">
+                <h2 align="center">Welcome to the Math Expression Evaluator</h2>
+            </div>
+            <!--<h5>PS:This module is used to compute the value of the mathematical expression entered below </h5>-->
+        </head>
+
+        <body class="well">
+            <div class="well">
+                <!-- adding the the actual directive as an element so the html from the directive gets injected below -->
+                <evaluate-math-exp></evaluate-math-exp>
+            </div>
+        </body>
+    </html>
+
